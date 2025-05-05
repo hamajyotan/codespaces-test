@@ -1,0 +1,10 @@
+{
+  "name": "codespaces-test",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "forwardPorts": [3000],
+  "postAttachCommand": "ruby -run -e httpd . -p 3000",
+  "postCreateCommand": "gem install webrick"
+}
